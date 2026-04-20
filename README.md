@@ -60,6 +60,7 @@ Per-app audio routing for streamers, podcasters, and professionals who need prec
 | **Per-App Mute** | Mute individual apps without stopping the audio tap. |
 | **Real-Time Level Meters** | Visual audio level display per app. |
 | **Parametric EQ** | Per-app and master parametric equalizer with visual frequency curve. |
+| **Peak Limiter** | Per-app and per-bus brick-wall limiters with adjustable ceiling — prevents clipping in your stream or recording when multiple apps sum together. |
 | **Routing Profiles** | Save and switch between different routing configurations. |
 | **Global Hotkeys** | Keyboard shortcuts for per-app routing control. |
 | **7-Day Free Trial** | Try all Pro features free for 7 days on both plans. |
