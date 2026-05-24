@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/linguaholic/litlink-app/releases/latest/download/LitLink.pkg"><strong>Download LitLink Free</strong></a>&nbsp;&nbsp;·&nbsp;&nbsp;
+  <a href="https://github.com/linguaholic/litlink-app/releases/latest"><strong>Download LitLink Free</strong></a>&nbsp;&nbsp;·&nbsp;&nbsp;
   <a href="https://litpads.app/litlink">Website</a>&nbsp;&nbsp;·&nbsp;&nbsp;
   <a href="https://litpads.app/litlink/buy">Get LitLink Pro</a>
 </p>
@@ -69,7 +69,7 @@ Per-app audio routing for streamers, podcasters, and professionals who need prec
 
 ## Quick Start
 
-1. **Download** — grab [LitLink.pkg](https://github.com/linguaholic/litlink-app/releases/latest/download/LitLink.pkg) and run the installer
+1. **Download** — grab [LitLink.pkg](https://github.com/linguaholic/litlink-app/releases/latest) and run the installer
 2. **Open LitLink** — the app runs in your menu bar
 3. **Toggle System Audio Passthrough** — one click, done
 4. **Select "LitLink Audio Bridge"** as the input device in Discord, OBS, Zoom, or any app
@@ -183,7 +183,7 @@ Yes. LitPads is a custom soundboard app for Mac, iPad, and iPhone. LitLink route
 
 ## Download
 
-**[Download LitLink.pkg](https://github.com/linguaholic/litlink-app/releases/latest/download/LitLink.pkg)** — macOS 14+ · Signed & notarized by Apple
+**[Download LitLink.pkg](https://github.com/linguaholic/litlink-app/releases/latest)** — macOS 14+ · Signed & notarized by Apple
 
 Looking for a specific version? Every release is archived on the **[releases page](https://github.com/linguaholic/litlink-app/releases)**.
 
