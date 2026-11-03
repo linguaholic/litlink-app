@@ -6,7 +6,7 @@
 
 <p align="center">
   A free virtual audio driver for macOS that routes system audio and microphone input to any application.<br/>
-  One-toggle setup. No Audio MIDI Setup. No aggregate devices. Just works.
+  One-toggle setup, a free per-app volume mixer, no Audio MIDI Setup.
 </p>
 
 <p align="center">
@@ -27,9 +27,9 @@
 
 ## What Is LitLink?
 
-LitLink is a virtual audio driver for macOS that creates a virtual audio device on your Mac. Any application — Discord, OBS, Zoom, QuickTime, or any DAW — can use this device as an audio input to receive system audio, microphone audio, or both.
+LitLink is a virtual audio driver for macOS with a companion app. It adds a virtual audio device, **LitLink Audio Bridge**, that any application (Discord, OBS, Zoom, QuickTime or any DAW) can use as its input to receive system audio, your microphone, or both.
 
-Unlike BlackHole or other virtual audio cables that require manual Audio MIDI Setup configuration, LitLink includes a companion app that handles everything automatically with a single toggle.
+Unlike BlackHole or other virtual audio cables that need manual Audio MIDI Setup configuration, LitLink sets everything up for you with a single toggle. It also adds the per-app volume mixer macOS never shipped.
 
 ---
 
@@ -37,45 +37,45 @@ Unlike BlackHole or other virtual audio cables that require manual Audio MIDI Se
 
 ### LitLink Free
 
-Everything you need for basic audio routing — completely free, no account required, no time limit.
+Everything you need for everyday audio routing. Free, no account required, no time limit.
 
 | Feature | Description |
 |---------|-------------|
-| **System Audio Passthrough** | Routes all system audio to the virtual device with one toggle. Automatically creates and configures the multi-output device. |
-| **Mic Passthrough** | Combines your microphone audio with system audio into a single stream. No aggregate device setup needed. |
-| **Companion App** | Menu bar app with visual controls, status display, and mic volume adjustment. |
-| **Automatic Multi-Output Device** | LitLink creates the multi-output device and sets it as system default automatically. No Audio MIDI Setup required. |
-| **Persistence** | Configuration survives restarts. Set it once, forget it. |
-| **32-bit Float / 48 kHz Stereo** | Studio-grade audio quality at the kernel level. |
-| **Built-in Help Guide** | Setup instructions for Discord, OBS, Zoom, and every supported application. |
+| **Per-App Volume Mixer** | A different volume for every app, mute apps individually, and a master fader, right from the menu bar. The mix plays through the output you already use. |
+| **System Audio Passthrough** | Routes all system audio into LitLink Audio Bridge with one toggle. Creates the multi-output device for you, and can follow your Mac's output when you switch to headphones or AirPods. |
+| **Mic Passthrough** | Mixes your microphone (USB, built-in, audio interface, or Bluetooth headsets like AirPods) into the same stream as system audio. No aggregate device needed. |
+| **Recording** | Record whatever flows through LitLink Audio Bridge (mic, system audio or both) to a .wav file, no DAW needed. |
+| **Menu Bar App** | Visual controls, live level meters and status, with the same controls in the menu bar. |
+| **Persistence** | Your setup survives restarts and updates. |
+| **Built-in Setup Guide** | Step-by-step setup for Discord, OBS, Zoom and other apps. |
 
-### LitLink Pro — $3.99/mo or $29 Lifetime
+### LitLink Pro: $3.99/month or $29 lifetime
 
-Per-app audio routing for streamers, podcasters, and professionals who need precise control.
+For streamers, podcasters and musicians who need more than one thing going on.
 
 | Feature | Description |
 |---------|-------------|
-| **Per-App Audio Routing** | Select specific apps to route through LitLink using the macOS Process Tap API. |
-| **Individual Volume Control** | Independent volume slider for each routed application. |
-| **Per-App Mute** | Mute individual apps without stopping the audio tap. |
-| **Real-Time Level Meters** | Visual audio level display per app. |
-| **Parametric EQ** | Per-app and master parametric equalizer with visual frequency curve. |
-| **Peak Limiter** | Per-app and per-bus brick-wall limiters with adjustable ceiling — prevents clipping in your stream or recording when multiple apps sum together. |
-| **Routing Profiles** | Save and switch between different routing configurations. |
-| **Global Hotkeys** | Keyboard shortcuts for per-app routing control. |
-| **7-Day Free Trial** | Try all Pro features free for 7 days on both plans. |
+| **Per-App Routing** | Send each app to its own LitLink track (8 tracks, each a separate input in OBS, Discord or your DAW) or straight to a different output device: music on the speakers while the call stays on your AirPods. |
+| **Mix Mode** | Blend apps, mic and system audio into one mix, hear it live, and send that exact mix to your stream, recordings and calls. |
+| **Mic Sends and Additional Inputs** | Your mic into any track at its own level, plus a second mic or an instrument with its own EQ. |
+| **Volume Boost up to 400%** | Make quiet apps loud, with a limiter that keeps them clean. |
+| **EQ, Limiter and AU Plugins** | Parametric EQ and limiter per app, on your mic and on the final mix, plus any Audio Unit effect. |
+| **Separate-Tracks and Per-Track Recording** | Your mic, your apps and each track as separate files from one take, or Split L/R (mic left, apps right). |
+| **Multi-Track Editor** | Stack a session's recordings, trim, fade, mix and export. |
+| **Named Tracks and DAW-to-DAW Routing** | Your own track names in OBS, Discord and your DAW, and up to 8 tracks between two DAWs. |
+| **7-Day Free Trial** | Start it in the app. No credit card required. |
 
 ---
 
 ## Quick Start
 
-1. **Download** — grab [LitLink.pkg](https://github.com/linguaholic/litlink-app/releases/latest) and run the installer
-2. **Open LitLink** — the app runs in your menu bar
-3. **Toggle System Audio Passthrough** — one click, done
-4. **Select "LitLink Audio Bridge"** as the input device in Discord, OBS, Zoom, or any app
-5. **Optional:** toggle Mic Passthrough to combine your voice with system audio
+1. **Download** the latest [LitLink installer](https://github.com/linguaholic/litlink-app/releases/latest) and run it
+2. **Open LitLink** from Applications
+3. **Turn on System Audio Passthrough**, one click
+4. **Select "LitLink Audio Bridge"** as the input device in Discord, OBS, Zoom or any app
+5. **Optional:** turn on Mic Passthrough to mix your voice in
 
-That's it. No Audio MIDI Setup. No multi-output device configuration. No master clock settings.
+That's it. No Audio MIDI Setup, no multi-output device configuration, no clock settings.
 
 ---
 
@@ -83,28 +83,29 @@ That's it. No Audio MIDI Setup. No multi-output device configuration. No master 
 
 | Use Case | How |
 |----------|-----|
-| **Share audio on Discord** | Toggle system audio passthrough, select LitLink Audio Bridge as input in Discord voice settings |
+| **Balance your apps' volumes** | Open the Per-App Volume tab or the menu bar and set each app's level (free) |
+| **Share audio on Discord** | Turn on System Audio Passthrough, select LitLink Audio Bridge as the input in Discord's voice settings |
 | **Capture system audio in OBS** | Add LitLink Audio Bridge as an audio input source in OBS |
 | **Play audio in Zoom meetings** | Select LitLink Audio Bridge as your microphone in Zoom |
-| **Record app audio in QuickTime** | Choose LitLink Audio Bridge as the microphone in a new audio recording |
-| **Route soundboard to Discord/OBS** | Use [LitPads](https://litpads.app) for soundboard + LitLink for routing |
-| **Stream with per-app control** | LitLink Pro: route Chrome audio without Spotify, or vice versa |
-| **Podcast recording** | Capture specific application audio while excluding others |
+| **Record app audio** | Use LitLink's Record button, or choose LitLink Audio Bridge in QuickTime |
+| **Route a soundboard to Discord or OBS** | Use [LitPads](https://litpads.app) for the soundboard and LitLink for routing |
+| **Stream with per-app control** | LitLink Pro: game on its own track for OBS, music kept out of the call |
+| **Record a podcast** | LitLink Pro: your mic, your guest's app and the mix as separate files from one take |
 
 ---
 
-## LitLink vs BlackHole vs Loopback
+## LitLink vs BlackHole
 
-| | LitLink Free | LitLink Pro | BlackHole | Loopback |
-|---|---|---|---|---|
-| **Price** | Free | $3.99/mo or $29 | Free | $99 |
-| **Setup** | One toggle | One toggle | Manual Audio MIDI Setup | Visual routing UI |
-| **Mic Passthrough** | Built-in | Built-in | Not included | Manual wiring |
-| **Per-App Routing** | — | Per-app with volume | — | Per-app with wires |
-| **Multi-Output Device** | Automatic | Automatic | Manual | Automatic |
-| **Companion App** | Included | Included | Not included | Included |
-| **EQ** | — | Per-app + master | — | — |
-| **Audio Quality** | 32-bit float / 48 kHz | 32-bit float / 48 kHz | 32-bit float / 48 kHz | 32-bit float / 48 kHz |
+| | LitLink Free | LitLink Pro | BlackHole |
+|---|---|---|---|
+| **Price** | Free | $3.99/month or $29 lifetime | Free (open source) |
+| **Setup** | One toggle | One toggle | Manual Audio MIDI Setup |
+| **Companion App** | Included | Included | Not included |
+| **Per-App Volume** | Included | Included | Not included |
+| **Mic Passthrough** | Built in | Built in | Not included |
+| **Recording** | Built in | Per track and separate files | Not included |
+| **Per-App Routing** | Not included | 8 tracks or any output device | Not included |
+| **EQ and Limiter** | Not included | Per app, mic and mix | Not included |
 
 ---
 
@@ -112,14 +113,13 @@ That's it. No Audio MIDI Setup. No multi-output device configuration. No master 
 
 | Spec | Value |
 |------|-------|
-| **Driver Type** | HAL (Hardware Abstraction Layer) audio plugin |
+| **Driver Type** | Core Audio HAL plug-in (runs inside macOS's audio service, no kernel extension) |
 | **Audio Format** | 32-bit float, stereo |
 | **Sample Rates** | 44.1 kHz, 48 kHz, 96 kHz |
-| **Latency** | Near-zero (kernel level) |
-| **Architecture** | Universal binary (Apple Silicon + Intel) |
-| **Minimum macOS** | 14.0 Sonoma (Free), 14.2 (Pro per-app routing) |
+| **Architecture** | Universal (Apple Silicon and Intel) |
+| **Minimum macOS** | 14.0 Sonoma (Pro per-app routing needs 14.2) |
 | **Installer** | Signed with Developer ID, notarized by Apple |
-| **Installer Size** | ~3.5 MB |
+| **Installer Size** | About 8.5 MB |
 
 ---
 
@@ -128,62 +128,68 @@ That's it. No Audio MIDI Setup. No multi-output device configuration. No master 
 <details>
 <summary><strong>Is LitLink really free?</strong></summary>
 <br/>
-Yes. LitLink Free includes mic passthrough, system audio passthrough, automatic multi-output device creation, the companion app, and the built-in help guide. No trial period, no time limit, no account required. These features are permanently free.
+Yes. LitLink Free includes the per-app volume mixer, System Audio Passthrough, Mic Passthrough, recording, the menu bar app and the setup guide. No trial period, no time limit, no account required. These features stay free.
 </details>
 
 <details>
 <summary><strong>How do I get LitLink Pro?</strong></summary>
 <br/>
-Download and install LitLink Free first. Open the app, scroll to the Pro section, and click "Buy LitLink Pro." Choose monthly ($3.99/mo) or lifetime ($29). Both plans include a 7-day free trial. After purchase, enter your transaction ID in the app and click Activate.
+Install LitLink Free first. In the app, open the Pro section and start the 7-day free trial (no card needed), or click Buy Pro and choose monthly ($3.99) or lifetime ($29). After purchase you get a transaction ID by email: enter it in the app and Pro unlocks instantly, no reinstall needed.
 </details>
 
 <details>
 <summary><strong>Does LitLink work with Apple Silicon and Intel Macs?</strong></summary>
 <br/>
-Yes. LitLink is a universal binary that runs natively on Apple Silicon (M1, M2, M3, M4) and Intel Macs without Rosetta translation.
+Yes. The app and the driver are universal binaries and run natively on Apple Silicon and Intel Macs, without Rosetta.
+</details>
+
+<details>
+<summary><strong>Can I use AirPods or other Bluetooth headsets as my mic?</strong></summary>
+<br/>
+Yes. LitLink converts their low sample rate itself. While their mic is in use, macOS plays Bluetooth headsets at call quality, the same as in any calling app.
 </details>
 
 <details>
 <summary><strong>Is LitLink safe to install?</strong></summary>
 <br/>
-LitLink is signed with a Developer ID certificate and notarized by Apple. macOS Gatekeeper verifies the signature before installation. The installer places the audio driver in the standard system audio plugin directory and the app in your Applications folder.
+LitLink is signed with a Developer ID certificate and notarized by Apple, and macOS Gatekeeper checks the signature before installation. The installer places the audio driver in the standard system audio plug-in folder and the app in your Applications folder.
 </details>
 
 <details>
 <summary><strong>Does LitLink add latency?</strong></summary>
 <br/>
-System audio passthrough operates at the kernel level with near-zero latency. Mic passthrough adds approximately 42ms through a minimal ring buffer, which is imperceptible in voice calls and streaming.
+System Audio Passthrough adds no noticeable delay. Mic Passthrough and per-app routing pass through a short buffer that LitLink keeps small, well within what calls and streams tolerate. If you ever need numbers, Export Diagnostics in the app reports the measured delay.
 </details>
 
 <details>
 <summary><strong>How do I uninstall LitLink?</strong></summary>
 <br/>
-Open the LitLink app, go to the Status section, and click "Uninstall Driver." The app removes the driver, disables passthrough, restores your original audio output, and cleans up the multi-output device. Then delete LitLink from Applications.
+Open LitLink and click Uninstall Driver in the Driver Status card at the bottom of the sidebar. LitLink turns off passthrough, removes its multi-output device, restores your original output and removes the driver. Then delete LitLink from Applications.
 </details>
 
 <details>
 <summary><strong>Which apps work with LitLink?</strong></summary>
 <br/>
-Any app that accepts audio input on macOS: Discord, OBS, Zoom, Google Meet, Twitch Studio, QuickTime, GarageBand, Logic Pro, Audacity, and any DAW or recording tool.
+Any app that accepts audio input on macOS: Discord, OBS, Zoom, Google Meet, Microsoft Teams, QuickTime, GarageBand, Logic Pro, Ableton Live, Audacity and other DAWs and recording tools.
 </details>
 
 <details>
-<summary><strong>Why don't some apps appear in per-app routing?</strong></summary>
+<summary><strong>Why doesn't an app show up in the per-app list?</strong></summary>
 <br/>
-Apps only appear when actively producing audio. Start playback in the app and click Refresh App List.
+Apps appear once they play audio. Start playback in the app and it shows up; you can also add and pin apps so they stay in the list.
 </details>
 
 <details>
 <summary><strong>Can I use LitLink with LitPads?</strong></summary>
 <br/>
-Yes. LitPads is a custom soundboard app for Mac, iPad, and iPhone. LitLink routes LitPads audio to Discord, OBS, Zoom, or any other application. Together they provide a complete audio routing and soundboard solution for streamers and content creators.
+Yes. LitPads is a custom soundboard app for Mac, iPad and iPhone. LitLink routes LitPads audio to Discord, OBS, Zoom or any other app.
 </details>
 
 ---
 
 ## Download
 
-**[Download LitLink.pkg](https://github.com/linguaholic/litlink-app/releases/latest)** — macOS 14+ · Signed & notarized by Apple
+**[Download the latest LitLink installer](https://github.com/linguaholic/litlink-app/releases/latest)** · macOS 14+ · about 8.5 MB · Signed & notarized by Apple
 
 Looking for a specific version? Every release is archived on the **[releases page](https://github.com/linguaholic/litlink-app/releases)**.
 
