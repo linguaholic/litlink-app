@@ -180,6 +180,12 @@ Apps appear once they play audio. Start playback in the app and it shows up; you
 </details>
 
 <details>
+<summary><strong>Can I control or route a single web app?</strong></summary>
+<br/>
+Yes, with Safari: open the site in Safari and choose File > Add to Dock. The web app then appears in LitLink as its own app with its own volume, and with Pro its own routing. Web apps installed from Chrome or Edge play their sound through the browser together with all its tabs, so they can't be separated from it.
+</details>
+
+<details>
 <summary><strong>Can I use LitLink with LitPads?</strong></summary>
 <br/>
 Yes. LitPads is a custom soundboard app for Mac, iPad and iPhone. LitLink routes LitPads audio to Discord, OBS, Zoom or any other app.
